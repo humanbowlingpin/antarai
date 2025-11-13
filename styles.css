@@ -190,6 +190,17 @@ a:hover {
   filter: hue-rotate(20deg) brightness(200%) grayscale(30%);
 }
 
+.soundofdesolate {
+  --main: #470a0a;
+  --background: #ed9898;
+  --background-rgb: 237, 152, 152;
+  --secondary: #a13828;
+}
+
+.soundofdesolate main img {
+  filter: hue-rotate(-30deg) brightness(200%) grayscale(30%);
+}
+
 @media (max-width: 600px) {
   .wrapper, header, footer, main, aside, .cbox, .container, .members-box {
     min-width: none;
