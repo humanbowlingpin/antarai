@@ -12,23 +12,39 @@
 :root {
   --main: #052;
   --background: beige;
+  --secondary: #693;
 }
 
 body {
     background-color: var(--background);
     width: 100vw;
     color: var(--main);
-    font-family: "Special Elite", Muekmod;
+    font-family: Muekmod, "Special Elite";
+    font-size: 130%;
+    line-height: 0.8;
 }
 
-[lang="th"] {
-    font-size: 130%;
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+/* [lang="th"] {
+    font-size: 1.3rem;
+}
+
+[lang="en"] {
+  font-size: 1rem;
+} */
 
 header, footer {
     width: 50%;
     text-align: center;
     margin: 0 auto;
+}
+
+footer {
+  padding: 1em;
 }
 
 header img {
@@ -37,13 +53,27 @@ header img {
 
 .container {
   display: flex;
-  gap: 1em;
+  gap: 5px;
   justify-content: center;
+  align-items: flex-start;
+}
+
+p {
+  margin-top: 0;
+}
+
+ol {
+  list-style-type: lower-roman;
+}
+
+a {
+  color: var(--secondary)
 }
 
 main{
     width: 50%;
-    border: 1px solid red;
+    border: 1px solid var(--main);
+    padding: 1em;
 }
 
 aside {
@@ -54,4 +84,8 @@ aside {
 
 .emptydiv {
   width: 20%;
+}
+
+hr {
+  border: 0.5px solid var(--main);
 }
