@@ -15,13 +15,20 @@
   --secondary: #693;
 }
 
+html {
+  overflow-x: none;
+} 
+
 body {
+    padding: 0;
+    margin: 0;
     background-color: var(--background);
     width: 100vw;
     color: var(--main);
     font-family: Muekmod, "Special Elite";
     font-size: 130%;
     line-height: 0.8;
+    overflow-x: none;
 }
 
 .wrapper {
@@ -43,6 +50,10 @@ header, footer {
     margin: 0 auto;
 }
 
+header {
+  margin-top: 1em;
+}
+
 footer {
   padding: 1em;
 }
@@ -53,12 +64,12 @@ header img {
 
 .container {
   display: flex;
-  gap: 5px;
+  gap: 3px;
   justify-content: center;
   align-items: flex-start;
 }
 
-p {
+p, h1 {
   margin-top: 0;
 }
 
@@ -70,22 +81,141 @@ a {
   color: var(--secondary)
 }
 
-main{
+main {
     width: 50%;
-    border: 1px solid var(--main);
+    /* border: 1px solid var(--main); */
     padding: 1em;
+    background-color: rgba(var(--background-rgb), 0.8);
 }
 
-aside {
-  border: 2px dotted var(--main);
+.band main {
+    border: 1px solid var(--main);
+}
+
+main > img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+aside, .cbox {
+/*  border: 1px dotted var(--main); */
   padding: 1em;
   width: 20%;
 }
 
-.emptydiv {
-  width: 20%;
+.cbox {
+  padding: 0;
 }
 
 hr {
   border: 0.5px solid var(--main);
+}
+
+.member-img {
+  float: left;
+  width: 70px;
+  border: 1px dotted var(--main);
+  margin: 0 1em 0 0;
+}
+
+.members-box > div:nth-child(even) .member-img {
+  float: right;
+  margin: 0 0 0 1em;
+}
+
+.members-box > div:nth-child(even) {
+  text-align: right;
+}
+
+.members-box > div {
+  width: 100%;
+}
+
+.band main, .band header, .band footer {
+  width: 80%;
+}
+
+.band footer {
+  color: var(--background);
+}
+
+.members-box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.members-box h2 {
+  align-text: center;
+}
+
+h3 {
+/*  margin-bottom: .3em; */
+}
+
+ol > li > a {
+  display: inline-block;
+  height: 1rem;
+  line-height: 0.2em;
+/*  background-color: red; */
+}
+
+ol > li:nth-child(odd) > a {
+/*  background-color: blue; */
+}
+
+a:hover {
+  color: var(--main)
+}
+
+/* page specific */
+
+.solidcore {
+  --main: #264d83;
+  --background: #ceedec;
+  --background-rgb: 206, 237, 236;
+  --secondary: #5381be;
+}
+
+.solidcore {
+  background-image: url(img/solidcore/background.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  background-size: 100% auto;
+}
+
+.solidcore main img {
+  filter: hue-rotate(20deg) brightness(200%) grayscale(30%);
+}
+
+@media (max-width: 600px) {
+  .wrapper, header, footer, main, aside, .cbox, .container, .members-box {
+    min-width: none;
+    max-width: none;
+    width: 100% !important;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
+  
+  main, aside, .cbox {
+    border: none;
+    border-bottom: 1px solid var(--main)
+  }
+  
+  .band main {
+    border: none;
+  }
+  
+  header {
+    margin: 0;
+  }
+  
+  footer {
+    margin: 0;
+  }
+  
 }
