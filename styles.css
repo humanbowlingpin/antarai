@@ -13,6 +13,7 @@
   --main: #052;
   --background: beige;
   --secondary: #693;
+  --background-image: "read";
 }
 
 html {
@@ -29,6 +30,11 @@ body {
     font-size: 130%;
     line-height: 0.8;
     overflow-x: none;
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: scroll;
+    background-size: 100% auto;
 }
 
 .wrapper {
@@ -176,14 +182,7 @@ a:hover {
   --background: #ceedec;
   --background-rgb: 206, 237, 236;
   --secondary: #5381be;
-}
-
-.solidcore {
-  background-image: url(img/solidcore/background.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: scroll;
-  background-size: 100% auto;
+  --background-image: url("img/solidcore/background.png");
 }
 
 .solidcore main img {
@@ -195,10 +194,11 @@ a:hover {
   --background: #ed9898;
   --background-rgb: 237, 152, 152;
   --secondary: #a13828;
+  --background-image: url("img/soundofdesolate/background.png");
 }
 
 .soundofdesolate main img {
-  filter: hue-rotate(-30deg) brightness(200%) grayscale(30%);
+  filter: hue-rotate(-30deg) brightness(80%) saturate(30%);
 }
 
 @media (max-width: 600px) {
