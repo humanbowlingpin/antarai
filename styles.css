@@ -192,6 +192,20 @@ html[lang="en"] *[lang]:not([lang="en"]) {
 html[lang="th"] *[lang]:not([lang="th"]) {
   display: none;
 }
+.language-picker {
+  width: 100%;
+  text-align: center;
+}
+#language-switcher {
+  border: 1px solid var(--main);
+  background-color: var(--background);
+  border-radius: none;
+  font-family: inherit;
+  font-size: 1em;
+  color: var(--main)
+  width: 100%;
+  display: block;
+}
 
 /* page specific */
 

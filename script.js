@@ -1,15 +1,17 @@
-let currentLang = "en"
+let currentLang = localStorage.getItem('lang') || "en"
 const languageButton = document.querySelector("#language-switcher")
-languageButton.addEventListener('click', () => {
-    console.log(currentLang)
-    if (currentLang == "th") {
-        currentLang = "en"
-        languageButton.innerHTML = "english / ภาษาอังกฤษ"
-        document.documentElement.setAttribute('lang', 'en')
-    } else {
-        currentLang = "th"
-        languageButton.innerHTML = "thai / ภาษาไทย"
-        document.documentElement.setAttribute('lang', 'th')
-    }
-    console.log(currentLang)
-})
+
+if(languageButton) {
+    languageButton.addEventListener('click', () => {
+        currentLang == "en" ? currentLang = "th" : currentLang = "en"
+        localStorage.setItem('lang', currentLang)
+        displayLanguage()
+    })
+}
+
+function displayLanguage () {
+    currentLang == "en" ? document.documentElement.setAttribute('lang', 'en') : document.documentElement.setAttribute('lang', 'th')
+    if (languageButton) currentLang == "en" ? languageButton.innerHTML = "ภาษาไทย" : languageButton.innerHTML = "english"
+}
+
+displayLanguage()
