@@ -179,6 +179,27 @@ ul {
   list-style-type: '- ';
 }
 
+.favorite-songs {
+  text-align: center;
+}
+
+.links ul {
+  columns: 2;
+}
+
+.links {
+  border: 1px dotted var(--main);
+  margin: 1em;
+}
+
+html[lang="en"] *[lang]:not([lang="en"]) {
+  display: none;
+}
+
+html[lang="th"] *[lang]:not([lang="th"]) {
+  display: none;
+}
+
 /* page specific */
 
 .solidcore {
@@ -231,6 +252,10 @@ ul {
   
   footer {
     margin: 0;
+  }
+  
+  .links ul {
+    columns: 1;
   }
   
 }
