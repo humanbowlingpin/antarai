@@ -18,6 +18,8 @@
 
 html {
   overflow-x: none;
+  padding: 0;
+  margin: 0;
 } 
 
 body {
@@ -41,14 +43,6 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-/* [lang="th"] {
-    font-size: 1.3rem;
-}
-
-[lang="en"] {
-  font-size: 1rem;
-} */
 
 header, footer {
     width: 50%;
@@ -89,7 +83,6 @@ a {
 
 main {
     width: 50%;
-    /* border: 1px solid var(--main); */
     padding: 1em;
     background-color: rgba(var(--background-rgb), 0.8);
 }
@@ -106,13 +99,18 @@ main > img {
 }
 
 aside, .cbox {
-/*  border: 1px dotted var(--main); */
   padding: 1em;
   width: 20%;
 }
 
+aside {
+  position: sticky;
+  top: 0;
+}
+
 .cbox {
   padding: 0;
+  text-align: center;
 }
 
 hr {
@@ -156,19 +154,14 @@ hr {
   align-text: center;
 }
 
-h3 {
-/*  margin-bottom: .3em; */
-}
+/* h3 {
+  margin-bottom: .3em;
+} */
 
 ol > li > a {
   display: inline-block;
   height: 1rem;
   line-height: 0.2em;
-/*  background-color: red; */
-}
-
-ol > li:nth-child(odd) > a {
-/*  background-color: blue; */
 }
 
 a:hover {
