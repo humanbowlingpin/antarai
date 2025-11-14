@@ -58,6 +58,10 @@ footer {
   padding: 1em;
 }
 
+footer p {
+  background-color: rgba(var(--background-rgb), 0.8)
+}
+
 header img {
     width: 100%;
 }
@@ -103,11 +107,6 @@ aside, .cbox {
   width: 20%;
 }
 
-aside {
-  position: sticky;
-  top: 0;
-}
-
 .cbox {
   padding: 0;
   text-align: center;
@@ -141,10 +140,6 @@ hr {
   width: 80%;
 }
 
-.band footer {
-  color: var(--background);
-}
-
 .members-box {
   max-width: 400px;
   margin: 0 auto;
@@ -174,6 +169,12 @@ ul {
 
 .favorite-songs {
   text-align: center;
+}
+
+.favorite-songs iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 560px;
 }
 
 .links ul {
@@ -260,8 +261,27 @@ html[lang="th"] *[lang]:not([lang="th"]) {
     margin: 0;
   }
   
+  footer p {
+    background-color: transparent;
+  }
+  
   .links ul {
     columns: 1;
   }
   
+  main {
+    background-color: transparent;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    opacity: 0.55;
+    z-index: -1;
+  }
 }
