@@ -13,7 +13,6 @@
   --main: #052;
   --background: beige;
   --secondary: #693;
-  --background-image: "read";
 }
 
 html {
@@ -37,6 +36,7 @@ body {
     background-position: center bottom;
     background-attachment: scroll;
     background-size: 100% auto;
+    position: relative;
 }
 
 .wrapper {
@@ -192,10 +192,11 @@ html[lang="en"] *[lang]:not([lang="en"]) {
 html[lang="th"] *[lang]:not([lang="th"]) {
   display: none;
 }
+
 .language-picker {
-  width: 100%;
   text-align: center;
 }
+
 #language-switcher {
   border: 1px solid var(--main);
   background-color: var(--background);
@@ -203,8 +204,6 @@ html[lang="th"] *[lang]:not([lang="th"]) {
   font-family: inherit;
   font-size: 1em;
   color: var(--main)
-  width: 100%;
-  display: block;
 }
 
 /* page specific */
